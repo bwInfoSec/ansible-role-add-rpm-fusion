@@ -15,8 +15,9 @@ galaxy_info:
 
   galaxy_tags:
     - rhel
-    - rhel_8
-    - rpm_fusion
+    - rhel8
+    - rpmfusion
+    - remote
 
 dependencies:
   - role: bwinfosec.add_epel
