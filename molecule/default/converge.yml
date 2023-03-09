@@ -1,0 +1,10 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: Add EPEL ropository
+      ansible.builtin.include_role:
+        name: bwinfosec.add_epel
+    - name: Add RPM-Fusion repository
+      ansible.builtin.include_role:
+        name: bwinfosec.add_rpm_fusion

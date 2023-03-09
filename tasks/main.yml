@@ -1,0 +1,24 @@
+---
+- name: Import assert.yml
+  ansible.builtin.import_tasks: assert.yml
+  run_once: true
+
+- name: Import RPM GPG key.
+  ansible.builtin.rpm_key:
+    key: "{{ item }}"
+    state: present
+  register: result
+  until: result is succeeded
+  retries: 5
+  delay: 10
+  ignore_errors: "{{ ansible_check_mode }}"
+  loop: "{{ rpm_fusion_repo_gpg_key_url }}"
+
+- name: Install RPM Fusion Repos
+  ansible.builtin.yum:
+    name: "{{ rpm_fusion_repo_url }}"
+    state: present
+  register: result
+  until: result is succeeded
+  retries: 5
+  delay: 10

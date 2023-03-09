@@ -1,0 +1,3 @@
+---
+roles:
+  - bwinfosec.add_epel
