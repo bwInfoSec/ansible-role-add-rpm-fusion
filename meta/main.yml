@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Stefan Machmeier
-  description: "This role configures the RPM repositories on Centos 8 or RHEL 8"
+  description: "This role configures the RPM Fusion repositories on Centos 8 or RHEL 8."
   license: EUPL1.2
   namespace: bwinfosec
   role_name: add_rpm_fusion
