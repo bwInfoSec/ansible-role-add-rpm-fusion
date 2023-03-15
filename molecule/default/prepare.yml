@@ -1,4 +1,4 @@
 ---
-- name: Prepare 
+- name: Prepare
   hosts: all
   # nothing to prepare
